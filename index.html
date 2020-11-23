@@ -3,23 +3,46 @@
 <html>
     <head>
         <meta charset="utf-8">
+
+        <link rel="stylesheet" href="bootstrap.min.css">
+        <style>
+            body {
+                margin-top: 20px;
+            }
+        </style>
+
         <title>Wake Lock</title>
+
+        <script src="script.js" defer></script>
     </head>
 
     <body>
-        <h1>Prevents the screen from going to sleep</h1>
-        <div id="wakelock-status"></div>
+        <div class="container">
+            <header>
+                <h1>Wake Lock</h1>
+                <h3>Prevents your computer from going to screen while this tab is open</h3>
+            </header>
+
+            <content>
+                <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="wakelock">
+                    <label class="custom-control-label" for="wakelock">Enable Wake Lock</label>
+                </div>
+                <span id="wakelock-status" class="badge badge-danger"></span>
+            </content>
+        </div>
         
         <script>
             statusElem = document.querySelector('#wakelock-status');
 
             if ('wakeLock' in navigator) {
                 isSupported = true;
-                statusElem.textContent = 'Wake Lock is active!';
+                statusElem.textContent = 'Wake Lock is available!';
             } else {
                 wakeButton.disabled = true;
                 statusElem.textContent = 'Wake lock is not supported by this browser.';
             }
         </script>
+
     </body>
 </html>
