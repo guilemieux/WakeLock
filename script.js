@@ -47,4 +47,10 @@ if (isSupported) {
     });
 
     requestWakeLock();
+
+    document.addEventListener('visibilitychange', () => {
+        if (wakeLock !== null && document.visibilityState === 'visible') {
+            requestWakeLock();
+        }
+    });
 }
