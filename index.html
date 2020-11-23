@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wake Lock</title>
+    </head>
+
+    <body>
+        <h1>Prevents the screen from going to sleep</h1>
+        <div id="wakelock-status"></div>
+        
+        <script>
+            statusElem = document.querySelector('#wakelock-status');
+
+            if ('wakeLock' in navigator) {
+                isSupported = true;
+                statusElem.textContent = 'Wake Lock is active!';
+            } else {
+                wakeButton.disabled = true;
+                statusElem.textContent = 'Wake lock is not supported by this browser.';
+            }
+        </script>
+    </body>
+</html>
