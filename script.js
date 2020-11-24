@@ -31,7 +31,7 @@ if (isSupported) {
                 changeUI('release');
             });
         } catch (err) {
-            wakeLockSwitch.value = 'off';
+            wakeLockSwitch.checked = false;
         }
     }
 
