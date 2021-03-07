@@ -1,0 +1,23 @@
+{
+  "name": "wakelock",
+  "version": "1.0.0",
+  "description": "Simple website that prevents a computer from going to sleep",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/guilemieux/WakeLock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/guilemieux/WakeLock/issues"
+  },
+  "homepage": "https://github.com/guilemieux/WakeLock#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
